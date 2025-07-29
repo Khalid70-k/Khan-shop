@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Khan Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <span>Khan Shop</span>
+    <span id="cart-count">🛒 0</span>
+  </header>
+
+  <nav>
+    <input type="text" id="searchBar" placeholder="Search products...">
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#cart">Cart</a>
+  </nav>
+
+  <main>
+    <section id="products">
+      <h2>Our Products</h2>
+      <div class="filter-buttons">
+        <button onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts('Smartphone')">Smartphones</button>
+        <button onclick="filterProducts('Laptop')">Laptops</button>
+        <button onclick="filterProducts('Headphones')">Headphones</button>
+        <button onclick="filterProducts('Smartwatch')">Smartwatches</button>
+        <button onclick="filterProducts('Bluetooth')">Speakers</button>
+        <button onclick="filterProducts('Mouse')">Mouse</button>
+      </div>
+
+      <div class="products" id="product-list">
+        <!-- Products inserted by JS -->
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
+      <button onclick="checkout()">Pay Now</button>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Khan Shop. All rights reserved.
+  </footer>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
